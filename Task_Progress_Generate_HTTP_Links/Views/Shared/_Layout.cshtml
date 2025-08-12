@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Task_Progress_Generate_HTTP_Links</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025 - Task_Progress_Generate_HTTP_Links -
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </p>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
