@@ -53,14 +53,6 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
    - **Option B: Run SQL Script**  
      Execute `DatabaseBackup/UrlShortenerDb.sql` using SQL Server Management Studio.
 
-   - **Option C: Restore from Backup**  
-     ```sql
-     RESTORE DATABASE UrlShortenerDb
-     FROM DISK = 'DatabaseBackup/UrlShortenerDb.bak'
-     WITH MOVE 'UrlShortenerDb' TO 'C:\SQLData\UrlShortenerDb.mdf',
-          MOVE 'UrlShortenerDb_log' TO 'C:\SQLData\UrlShortenerDb_log.ldf',
-          REPLACE;
-     ```
 
 4. **Run the application**  
    ```bash
