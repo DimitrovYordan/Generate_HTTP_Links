@@ -46,6 +46,7 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
    - **Option A: EF Core Migrations (recommended)**  
      ```bash
      dotnet tool install --global dotnet-ef
+     cd Task_Progress_Generate_HTTP_Links
      dotnet ef database update
      ```
 
