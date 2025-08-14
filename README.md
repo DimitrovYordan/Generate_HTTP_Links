@@ -53,8 +53,23 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
    - **Option B: Run SQL Script**  
      Execute `DatabaseBackup/UrlShortenerDb.sql` using SQL Server Management Studio.
 
-
 4. **Run the application**  
    ```bash
    dotnet run
    ```
+
+## Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DimitrovYordan/Generate_HTTP_Links.git
+2. Open the solution in Visual Studio.
+
+3. Restore NuGet packages.
+
+4. Configure the database connection string in appsettings.json.
+
+5. Apply migrations or restore the database (see section below).
+
+6. Run the application using IIS Express or dotnet run.
+
+7. Open the browser at: http://localhost:port you will see at console
