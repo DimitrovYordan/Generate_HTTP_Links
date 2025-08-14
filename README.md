@@ -72,7 +72,7 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
 
 6. Run the application using IIS Express or dotnet run.
 
-7. Open the browser at: http://localhost:port you will see at console
+7. Open the browser at http://localhost:port you will see at console
    ```
 
 Notes & tips
