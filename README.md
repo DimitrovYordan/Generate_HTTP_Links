@@ -28,3 +28,12 @@ This project is a **URL Shortener** with built-in statistics and visualizations.
 ```bash
 git clone <repository_url>
 cd Task_Progress_Generate_HTTP_Links
+
+## 🚀 Setup
+
+### 1. Configure database connection in appsettings.json:
+```bash
+"ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=UrlShortenerDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+}
+Change Server=localhost to match your SQL Server instance name.
