@@ -65,5 +65,3 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
    ```bash
    dotnet run
    ```
-   Then open in your browser:  
-   **https://localhost:5001** or **http://localhost:5000**
