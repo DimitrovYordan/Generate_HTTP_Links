@@ -73,3 +73,18 @@ A simple ASP.NET Core MVC application for shortening URLs, tracking visits, and 
 6. Run the application using IIS Express or dotnet run.
 
 7. Open the browser at: http://localhost:port you will see at console
+   ```
+
+Notes & tips
+
+Database configuration: Ensure that your SQL Server instance is running and that the connection string in appsettings.json is correct.
+
+Ports and SSL: The sample uses https://localhost:44324. If your port differs, adjust the URL accordingly.
+
+Static files: All styles are located in wwwroot/css/site.css. Modify this file for UI changes.
+
+Logging: Visit logs are recorded asynchronously to avoid blocking the main thread.
+
+Chart rendering: The statistics page uses Chart.js loaded from a CDN.
+
+Seeding data: If you use the SQL script or backup file, initial sample data will be included.
