@@ -14,6 +14,51 @@ main {
     padding: 20px;
 }
 
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Column headings */
+table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Table rows */
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Alternating lines for better readability */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover efects */
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Statistics title style */
+h2 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Graphic container */
+#visitsChart {
+    margin-top: 20px;
+}
+
 footer {
     background: #f0f0f0;
     padding: 10px;

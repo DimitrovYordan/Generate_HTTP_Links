@@ -1,0 +1,70 @@
+﻿@model List<Task_Progress_Generate_HTTP_Links.Models.VisitStatsViewModel>
+
+<h2>Top 10 IPs</h2>
+@if (Model.Any())
+{
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Original URL</th>
+                <th>Last Visit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IpAddress</td>
+                    <td>@item.Url</td>
+                    <td>@item.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<h2>Unique Visits per Day</h2>
+@if (ViewBag.DailyCounts != null && ViewBag.DailyCounts.Count > 0)
+{
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.DailyCounts)
+            {
+                <tr>
+                    <td>@item.Date</td>
+                    <td>@item.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <canvas id="visitsChart" width="400" height="200"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('visitsChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartLabels)),
+                datasets: [{
+                    label: 'Unique Visits per Day',
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartValues)),
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+}
+else
+{
+    <p>No statistics available for this URL.</p>
+}

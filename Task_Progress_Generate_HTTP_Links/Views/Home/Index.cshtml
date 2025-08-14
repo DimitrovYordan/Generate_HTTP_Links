@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>URL Shortener</h1>
+
+<!-- Input form for the user to submit a URL -->
+<form asp-action="Shorten" method="post">
+    <div>
+        <label for="url">Enter URL to shorten:</label>
+        <input type="text" id="url" name="url" placeholder="https://example.com" required />
+        <button type="submit">Shorten</button>
+    </div>
+</form>
+
+<!-- Display validation errors if the URL is invalid -->
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<!-- Display the shortened link only if it exists -->
+@if (ViewBag.ShortHref != null)
+{
+    <div style="margin-top:10px;">
+        <strong>Shortened link:</strong>
+        <a href="@ViewBag.ShortHref" target="_blank" style="color:green;">
+            @ViewBag.DisplayName
+        </a>
+    </div>
+
+    <!-- Display the secret stats URL -->
+    <div>
+        <strong>Secret Stats URL:</strong>
+        <a href="@ViewBag.StatsHref" target="_blank" style="color:blue;">
+            View Stats
+        </a>
+    </div>
+}

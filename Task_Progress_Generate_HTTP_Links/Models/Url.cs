@@ -10,13 +10,13 @@ namespace Task_Progress_Generate_HTTP_Links.Models
         public string OriginalUrl { get; set; }
 
         [Required, MaxLength(16)]
-        public string ShortlUrl { get; set; }
+        public string ShortUrl { get; set; }
 
         [Required, MaxLength(64)]
-        public string SecretURL { get; set; }
+        public string SecretUrl { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public List<Visit> Visits { get; set; } = new();
+        public ICollection<Visit> Visits { get; set; }
     }
 }
