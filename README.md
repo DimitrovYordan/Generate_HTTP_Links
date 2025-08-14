@@ -15,7 +15,14 @@ This project is a **URL Shortener** with built-in statistics and visualizations.
 
 ---
 
-## Getting Started
+## 🛠 Prerequisites
+- [.NET 6+ SDK](https://dotnet.microsoft.com/en-us/download)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or SQL Server Express
+- (Optional) [SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)
+
+---
+
+## 🚀 Setup
 
 ### 1. Clone the repository
 ```bash
