@@ -21,7 +21,3 @@ This project is a **URL Shortener** with built-in statistics and visualizations.
 ```bash
 git clone <repository_url>
 cd Task_Progress_Generate_HTTP_Links
-
-### 2. Open in Visual Studio
-
-Open the .sln file in Visual Studio 2022 (or newer).
